@@ -1,0 +1,53 @@
+﻿@model WebApplication1.Models.Dinner
+
+@Html.ValidationSummary("Correct errors and try again")
+using(Html.BeginForm()) 
+{
+
+<p> 
+    <label for="Title">Dinner Title : </label>
+    @Html.TextBox("Title")
+    @Html.ValidationMessage("Title", "*")
+</p>
+
+<p>
+    <label for="Event Date">Event Date : </label>
+    @Html.TextBox("Event Date")
+    @Html.ValidationMessage("EventDate", "*")
+</p>
+
+<p>
+    <label for="Description">Description : </label>
+    @Html.TextBox("Description")
+    @Html.ValidationMessage("Description", "*")
+</p>
+
+<p>
+    <label for="Address">Address : </label>
+    @Html.TextBox("Address")
+    @Html.ValidationMessage("Address", "*")
+</p>
+
+<p>
+    <label for="Country">Country : </label>
+    @Html.TextBox("Country")
+    @Html.ValidationMessage("Country", "*")
+</p>
+
+<p>
+    <label for="ContactPhone">Contact Phone # : </label>
+    @Html.TextBox("ConatctPhone")
+    @Html.ValidationMessage("ContactPhone", "*")
+</p>
+
+<p>
+    <input type="submit" value="Save"/>
+</p>
+
+<p>
+@Html.ActionLink("Edit Dinner |", "Edit", new { id = Model.DinnerID })
+@Html.ActionLink(" Delete Dinner", "Delete", new { id = Model.DinnerID })
+</p>
+
+
+}

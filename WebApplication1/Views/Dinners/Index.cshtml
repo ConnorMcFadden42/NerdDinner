@@ -1,0 +1,17 @@
+﻿@model List<WebApplication1.Models.Dinner>
+
+
+
+<h2>Dinners</h2>
+
+<ul>
+    @{
+        foreach (var dinner in @Model)
+        {
+            <li>
+                <a href="/Dinners/Details/@dinner.DinnerID">@dinner.Title</a>
+                @string.Format(" on {0} @ {1}", dinner.EventDate.ToShortDateString(), dinner.EventDate.ToShortTimeString())
+            </li>
+            }
+     }
+</ul>

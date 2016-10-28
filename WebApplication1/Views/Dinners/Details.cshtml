@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.Dinner
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div>
+    <strong>Dinner ID : </strong> 
+     @Model.DinnerID 
+</div>
+<div>
+    <strong>Title : </strong> 
+    @Model.Title
+</div>
+<div>
+    <strong>Event Date & Time : </strong> 
+    @Model.EventDate
+</div>
+<div>
+    <strong>Description : </strong> 
+    @Model.Description
+</div>
+<div>
+    <strong>Hosted By : </strong> 
+    @Model.HostedBy
+</div>
+<div>
+    <strong>Contact Phone : </strong> 
+    @Model.ContactPhone
+</div>
+<div>
+    <strong>Address : </strong> 
+    @Model.Address
+</div>
+<div>
+    <strong>Country : </strong> 
+    @Model.Country 
+</div>
+<div>
+    <strong>Latitude : </strong> 
+    @Model.Latitude 
+</div>
+<div>
+    <strong>Longitude : </strong> 
+    @Model.Logitude 
+</div>
+
+<p>
+    @Html.ActionLink("Edit Dinner |", "Edit", new { id = Model.DinnerID })
+    @Html.ActionLink(" Delete Dinner", "Delete", new { id = Model.DinnerID })
+</p>
